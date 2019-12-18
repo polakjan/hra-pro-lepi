@@ -1,0 +1,73 @@
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Krok 1</title>
+
+    <!-- tady se k HTML dokumentu připojuje soubor se styly -->
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+
+    <main>
+
+        <!-- 
+            V následujícím elementu se zobrazí zpráva o úspěšné odpovědi, bude-li nastavena.
+            Patří to k dobrému UX, aby uživatel (hráč) měl nějakou indikaci, že odpověděl správně.
+            Element je identifikován atributem id="zprava". 
+            Žádný jiný element na stránce tento atribut s touto hodnotou mít nesmí a pokud bude 
+            tenhle chybět, nebude to fungovat.
+            Jinak si ho ale můžeš dát kamkoli v celé stránce (jen PŘED <script> níže)
+         -->
+        <div id="zprava"></div>
+
+        <h1>Krok 1</h1>
+
+        <div class="question">
+            Jak říkal Horymír svému koni?
+        </div>
+
+        <!-- 
+            Následující pole je vstupní pole pro odpověď, je identifikováno atributem id="odpoved".
+            Žádný jiný element na stránce tento atribut s touto hodnotou mít nesmí a pokud bude 
+            tenhle chybět, nebude to fungovat.
+            Jinak si ho ale můžeš dát kamkoli v celé stránce (jen PŘED <script> níže)
+        -->
+        <input type="text" id="odpoved" value="">
+
+        <!-- 
+            Následující tlačítko "odešle" odpověď ke kontrole, je indentifikováno atributem id="odeslat".
+            Žádný jiný element na stránce tento atribut s touto hodnotou mít nesmí a pokud bude 
+            tenhle chybět, nebude to fungovat.
+            Jinak si ho ale můžeš dát kamkoli v celé stránce (jen PŘED <script> níže)
+         -->
+        <button id="odeslat">Odpověz!</button>
+
+    </main>
+
+    <!-- tady naloadujeme celou tu funkci pro aktivaci hry -->
+    <script src="hra.js"></script>
+    <script>
+    // JavaScript tady
+
+    // celá funkčnost je napsaná jako jedna funkce, kterou se každá stránka "aktivuje", aby se
+    // nemusel opakovat ten samý kód na každé stránce
+    // tady se ta funkce spouští a předávají se jí 3 až 4 parametry:
+
+    aktivujOtazku(
+        [
+            "Šemík",  // správné odpovědi, textové řetězce je třeba uzavřít v uvozovkách
+            "Šemíku", // správné odpovědi musí být mezi [ a ] a musí být od sebe oddělené čárkou
+            "šéma"    // může být taky jenom jediná správná odpověď, viz krok2.html
+        ],
+        'krok2.html', // stránka, na kterou se má přejít při úspěšné odpovědi
+        'chyba.html',  // stránka, na kterou se má přejít při neúspěšné odpovědi
+        'Ano, správně, byl to Šemík.' // text, který se zobrazí po úspěšné odpovědi. Nepovinný argument, 
+                                      // pokud se nezadá (viz krok2.html), použije se výchozí text "Správně!"
+    )
+    
+    </script>
+    
+</body>
+</html>

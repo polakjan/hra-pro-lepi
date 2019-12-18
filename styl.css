@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    max-width: 800px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#zprava {
+    align-self: stretch;    
+}
+
+#zprava > div {
+    padding: 0.5em;
+    background-color: #d1f8d1;
+    color: green;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.question,
+.chyba {
+    margin: 1rem;
+    font-size: 1.25em;
+}
+
+.chyba {
+    padding: 2em;
+    background-color: #ffd7d7;
+}
+
+#odpoved {
+    font-size: 1.5em;
+    padding: 0.5em;
+    border: 1px solid blue;
+    border-radius: 0.25em;
+    text-align: center;
+}
+
+#odeslat,
+.zpatky {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+    background: #1B6CAB;
+    background: -moz-linear-gradient(0deg, #1B6CAB 0%, #2d90de 100%);
+    background: -webkit-linear-gradient(0deg, #1B6CAB 0%, #2d90de 100%);
+    background: linear-gradient(180deg, #1B6CAB 0%, #2d90de 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#1B6CAB", endColorstr="#2d90de",GradientType=1 );
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    border: 0 none;
+    border-bottom: 0.0675em solid #1B6CAB;
+    border-radius: 0.1925em;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 0.5em 2em;
+    text-align: center;
+    display: inline-block;
+    width: auto;
+    text-decoration: none;
+}
+
+.zpatky {
+    display: block;
+    background: #999999;
+    background: -moz-linear-gradient(0deg, #999999 0%, #bbbbbb 100%);
+    background: -webkit-linear-gradient(0deg, #999999 0%, #bbbbbb 100%);
+    background: linear-gradient(180deg, #999999 0%, #bbbbbb 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#999999", endColorstr="#bbbbbb",GradientType=1 );
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    border-bottom: 0.0675em solid #999999;
+}

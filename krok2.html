@@ -1,0 +1,41 @@
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Krok 2</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+
+    <main>
+
+        <div id="zprava"></div>
+
+        <h1>Krok 2</h1>
+
+        <div class="question">
+            Ve kterém roce byla vydána Zlatá Bula Sicilská?
+        </div>
+
+        <input type="text" id="odpoved" value="">
+
+        <button id="odeslat">Odpověz!</button>
+
+    </main>
+
+    <script src="hra.js"></script>
+    <script>
+
+    aktivujOtazku(
+        [
+            1212
+        ],
+        'krok3.html',  // stránka, na kterou se má přejít při úspěšné odpovědi
+        'chyba.html'  // stránka, na kterou se má přejít při neúspěšné odpovědi
+    )
+
+    </script>
+    
+</body>
+</html>
